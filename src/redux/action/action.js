@@ -7,7 +7,7 @@ export const fetchCoins = (currency) => {
           axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&page=1&per_page=250`)
           .then(response =>{
               const data = response.data
-              console.log('api testing' , currency, data)
+              // console.log('api testing' , currency, data)
               dispatch({
                 type: actionTypes.COIN_API_SUCCESS,
                 payload: data
